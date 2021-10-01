@@ -10,5 +10,5 @@
 
 ## [Projeto final:](./Projeto/README.md) 
 
-O projeto consiste em uma aplicação que controa entrada e saída de veículos de um estacionamento.
+O projeto consiste em uma aplicação que controa entrada e saída de veículos de um estacionamento
 

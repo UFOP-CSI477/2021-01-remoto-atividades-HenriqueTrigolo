@@ -2,13 +2,13 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Henrique Trigolo de Almeida
+- Matrícula: 16.1.8195
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 2021/1
+- Link para o seu GitHub: [https://github.com/HenriqueTrigolo](https://github.com/HenriqueTrigolo)
 
 ## [Projeto final:](./Projeto/README.md) 
 
-Apresente uma breve descrição do seu projeto.
+O projeto consiste em uma aplicação que controa entrada e saída de veículos de um estacionamento.
 

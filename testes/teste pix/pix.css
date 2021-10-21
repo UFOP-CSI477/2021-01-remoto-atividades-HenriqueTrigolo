@@ -1,0 +1,21 @@
+
+
+header{
+    background-image: url(imagens/pix-logo.png);
+    margin: 0px;
+}
+
+
+body{
+    background-color: grey;
+}
+.menu{
+    background-color: rgb(139, 248, 166);
+    border-radius: 50px;
+    margin:0px;
+    text-align:center; 
+}
+
+.BotaoInferior{
+    margin-top: 10px;
+}

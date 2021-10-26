@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="pix.css">
+    <script src="pix.js"></script>
+    <title>Enviar</title>
+</head>
+<body>
+    <a href="pix.html">voltar</a>
+    
+        
+    <div class="chaves">
+
+        <form id="formulario">
+            <div>
+                <label for="TipoDeChave">Selecione o tipo de chave:</label>
+                <select name="TipoDeChave" id="chave">
+                    <option value="vazio">---Selecione---</option>
+                    <option value="cpf">CPF</option>
+                    <option value="cnpj">CNPJ</option>
+                    <option value="email">E-mail</option>
+                    <option value="celular">Numero do Celular</option>
+                    <option value="chave aleatoria">Chave Aleatória</option>
+                </select>
+            </div>
+          </form>
+
+        <form name="ValorDaChave">
+            <label>Digite sua chave aqui:</label>
+            <input type="text" name="chave" id="chave" placeholder="chave">
+        </form>
+
+        <form name="ValorReais">
+            <label>Digite o valor a ser transferido:</label>
+            <input type="text" name="valor" id="valor" placeholder="valor">
+        </form>
+
+        <form name="Data" class="Form-Data">
+            <label>Selecione a data para realizar a trasnferencia:</label>
+            <div>
+                <input type="radio" name="data" id="data" value="Hoje" onclick="desabilita(true)" checked>
+                <label for="data">Hoje</label>
+            </div>
+            <div>
+                <input type="radio" name="data" id="data" onclick="desabilita(false)">
+                <label for="data">Agendar</label>
+                <input type="date" id="date" disabled>
+            </div>
+        </form>
+        <form action="resumo.html">
+            <button type="submit" onclick="teste()">Enviar</button>
+            <input type="reset" value="Limpar">
+        </form>
+        
+    </div>
+</body>
+</html>
+
+
+<!--<div>
+    <input type="radio" name="genero" id="feminino" value="F">
+    <label for="feminino">Feminino</label>
+</div>
+<div>
+    <input type="radio" name="genero" id="masculino" value="M">
+    <label for="masculino">Masculino</label>
+</div>
+<div>
+    <input type="radio" name="genero" id="naobinario" value="NB">
+    <label for="naobinario">Não Binário</label>
+</div>
+<div>
+    <input type="radio" name="genero" id="semresposta" value="SR">
+    <label for="semresposta">Prefiro não responder</label>
+</div>
+<input type="submit" value="input" onclick="ValorDaChave(feminino.value)">
+<div>
+    <label for="chave">Valor da chave:</label>
+    <input type="text" name="chave" id="ch" placeholder="Somente Números">
+</div>-->

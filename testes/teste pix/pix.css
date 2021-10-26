@@ -7,15 +7,35 @@ header{
 
 
 body{
-    background-color: grey;
+    background-color:grey;
 }
 .menu{
     background-color: rgb(139, 248, 166);
     border-radius: 50px;
     margin:0px;
-    text-align:center; 
+    width: 500px;
+    height: 500px;
+    text-align:center;
 }
 
 .BotaoInferior{
     margin-top: 10px;
+}
+
+.chaves{
+    width: 200px;
+    background-color: rgb(136, 99, 99);
+    text-align:left;
+}
+
+.enviar, .receber{
+    width: 100px;
+    height: 30px;
+    border-radius: 100px;
+}
+.bb{
+    color:blue;
+    background-color: blueviolet;
+    border-radius: 50px;
+    text-align: center;
 }

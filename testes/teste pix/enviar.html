@@ -11,21 +11,19 @@
     
         
     <div class="chaves">
-
-        <form id="formulario">
-            <div>
-                <label for="TipoDeChave">Selecione o tipo de chave:</label>
-                <select name="TipoDeChave" id="chave">
-                    <option value="vazio">---Selecione---</option>
-                    <option value="cpf">CPF</option>
-                    <option value="cnpj">CNPJ</option>
-                    <option value="email">E-mail</option>
-                    <option value="celular">Numero do Celular</option>
-                    <option value="chave aleatoria">Chave Aleatória</option>
-                </select>
-            </div>
-          </form>
-
+        
+        <div>
+            <label for="TipoDeChave">Selecione o tipo de chave:</label>
+            <select name="TipoDeChave" id="chave">
+                <option value="vazio">---Selecione---</option>
+                <option value="cpf">CPF</option>
+                <option value="cnpj">CNPJ</option>
+                <option value="email">E-mail</option>
+                <option value="celular">Numero do Celular</option>
+                <option value="chave aleatoria">Chave Aleatória</option>
+            </select>
+        </div>
+            
         <form name="ValorDaChave">
             <label>Digite sua chave aqui:</label>
             <input type="text" name="chave" id="chave" placeholder="chave">
@@ -39,20 +37,29 @@
         <form name="Data" class="Form-Data">
             <label>Selecione a data para realizar a trasnferencia:</label>
             <div>
-                <input type="radio" name="data" id="data" value="Hoje" onclick="desabilita(true)" checked>
+                <input type="radio" name="data" id="hoje" value="Hoje" onclick="desabilita(true)" checked>
                 <label for="data">Hoje</label>
             </div>
             <div>
-                <input type="radio" name="data" id="data" onclick="desabilita(false)">
+                <input type="radio" name="data" id="agendar" value="Agendar" onclick="desabilita(false)">
                 <label for="data">Agendar</label>
-                <input type="date" id="date" disabled>
+                <input type="date" name="data" id="date" disabled>
             </div>
         </form>
-        <form action="resumo.html">
-            <button type="submit" onclick="teste()">Enviar</button>
-            <input type="reset" value="Limpar">
+
+        <form>
+                
+            <input type="button" value="CarregarBancos" onclick="carregarBancos()">
+
+            <select name="bancos" id="bancos">
+                <option value="null">Selecione:</option>
+            </select>
+                
         </form>
-        
+
+        <form action="resumo.html">    
+            <button type="submit" onclick="teste()">Enviar</button>   
+        </form>
     </div>
 </body>
 </html>

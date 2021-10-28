@@ -34,28 +34,8 @@ function carregarBancos(){
         .catch(error => console.error(error))
 }
 
-function teste(){
-    const TipoDeChave = document.querySelector('select[name="TipoDeChave"]').value;
-    const ValorDaChave = document.querySelector('input[name="chave"]').value;
-    const ValorReais = document.querySelector('input[name="valor"]').value;
-    var ValorData = document.querySelector('input[name="data"]:checked').value;
-    
 
-    if(ValorData == "Agendar"){
-        ValorData = document.querySelector('input[type="date"]').value;
-    }
-    
-    
-    const Banco = document.querySelector('select[name="bancos"]').value;
-
-    alert("tipo de chave: "+TipoDeChave+
-            "\nValor: "+ValorDaChave+
-            "\nReais: "+ValorReais+
-            "\nData: "+ValorData+
-            "\nBanco: "+Banco)
-}
-
-function teste(){
+function registra(){
     const TipoDeChave = document.querySelector('select[name="TipoDeChave"]').value;
     const ValorDaChave = document.querySelector('input[name="chave"]').value;
     const ValorReais = document.querySelector('input[name="valor"]').value;
@@ -72,8 +52,8 @@ function teste(){
     alert(  "Resumo do Envio:"+
             "\nChave Selecionada: "+TipoDeChave+
             "\nChave: "+ValorDaChave+
-            "\nQuantia Trasnferida: R$"+ValorReais+
-            "\nData da trasnferencia: "+ValorData+
+            "\nQuantia Transferida: R$"+ValorReais+
+            "\nData da transferencia: "+ValorData+
             "\nBanco: "+Banco)
 }
 
@@ -82,4 +62,25 @@ var saldoInicial = 1000;
 function saldo(){
 
     Resumo.visor.value = "R$" + saldoInicial;
+}
+
+function mostraChave(value){
+
+    if(value == "cpf"){
+        Visor_da_chave.visor.value = "32258740126";
+    }if (value == "cnpj") {
+        Visor_da_chave.visor.value = "54951723000199";
+    }if (value == "email") {
+        Visor_da_chave.visor.value = "henrique.almeida@aluno.ufop.edu.br"
+    }if (value == "celular") {
+        Visor_da_chave.visor.value = "011962093870";
+    }if (value == "chave aleatoria") {
+        Visor_da_chave.visor.value = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    }
+}
+
+function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
 }

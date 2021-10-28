@@ -7,15 +7,13 @@
     <title>Enviar</title>
 </head>
 <body>
-    <a href="pix.html">voltar</a>
-    
+      
+    <div class="informacoes">
         
-    <div class="chaves">
-        
-        <div>
+        <div class="select">
             <label for="TipoDeChave">Selecione o tipo de chave:</label>
             <select name="TipoDeChave" id="chave">
-                <option value="vazio">---Selecione---</option>
+                <option value="vazio">Selecione:</option>
                 <option value="cpf">CPF</option>
                 <option value="cnpj">CNPJ</option>
                 <option value="email">E-mail</option>
@@ -24,32 +22,34 @@
             </select>
         </div>
             
-        <form name="ValorDaChave">
+        <form class="valorchave" name="ValorDaChave">
             <label>Digite sua chave aqui:</label>
             <input type="text" name="chave" id="chave" placeholder="chave">
         </form>
 
-        <form name="ValorReais">
+        <form class="valorreais" name="ValorReais">
             <label>Digite o valor a ser transferido:</label>
             <input type="text" name="valor" id="valor" placeholder="valor">
         </form>
-
-        <form name="Data" class="Form-Data">
-            <label>Selecione a data para realizar a trasnferencia:</label>
-            <div>
+        
+        
+        
+        <form class="data" name="Data" class="Form-Data">
+            <label>Selecione a data para realizar a transferencia:</label>
+            <div class="data_radio">
                 <input type="radio" name="data" id="hoje" value="Hoje" onclick="desabilita(true)" checked>
                 <label for="data">Hoje</label>
             </div>
-            <div>
+            <div class="data_radio">
                 <input type="radio" name="data" id="agendar" value="Agendar" onclick="desabilita(false)">
                 <label for="data">Agendar</label>
                 <input type="date" name="data" id="date" disabled>
             </div>
         </form>
 
-        <form>
+        <form class="carregarbancos">
                 
-            <input type="button" value="CarregarBancos" onclick="carregarBancos()">
+            <input class="CB" type="button" value="Carregar Bancos" onclick="carregarBancos()">
 
             <select name="bancos" id="bancos">
                 <option value="null">Selecione:</option>
@@ -57,9 +57,14 @@
                 
         </form>
 
-        <form action="resumo.html">    
-            <button type="submit" onclick="teste()">Enviar</button>   
+        <form action="resumo.html" class="efetua">    
+            <button type="submit" onclick="registra()">Efetuar PIX</button>   
         </form>
+        
+        
+    </div>
+    <div class="voltar">
+        <a href="pix.html">Voltar</a>
     </div>
 </body>
 </html>

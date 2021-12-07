@@ -5,7 +5,7 @@ body{
 }
 
 .col{
-    background-color: blueviolet;
+    background-color: rgb(110, 110, 110);
     border-style: inset;
     margin: 10px;
 }
@@ -20,7 +20,7 @@ body{
 
 .tela-login{ 
     align-items: center;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(20, 122, 0);
     margin: auto;
     width:50%;
     height:100%;
@@ -34,3 +34,19 @@ body{
     border-style: inset;
     background-color: white;
 }
+
+
+
+.button {
+    background: #76c764;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    background: #e66969;
+  }

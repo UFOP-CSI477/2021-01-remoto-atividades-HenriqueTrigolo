@@ -1,7 +1,5 @@
 <?php
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
-    $id_modelo = null;
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,45 +15,8 @@
     
 </head>
 <body onload="iniciaRelogio()">
-   <h1>Seja bem vindo(a) <?php echo $usuario ?> </h1>
-        <!--<form action="vagas.php" method="post" class="row g-3">
-            <div class="col-md-4">
-                <label for="marca" class="form-label">Marca</label>
-                <select id="marca" name="marca" class="form-select" onchange="carregarModelo(this.value)">
-                    <option value="null" selected>Selecione a marca</option>
-                </select>
-
-                <input class="CB" type="button" value="Carregar Marcas" onclick="carregarMarca()">
-
-            </div>
-
-            <div class="col-md-4">
-                <label for="modelo" class="form-label">Modelo</label>
-                <select id="modelo" name="modelo" class="form-select">
-                    <option value="null" selected>Selecione o modelo</option>
-                </select>
-            </div>
-
-            <div class="col-md-4">
-                <label for="ano" class="form-label">Placa</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Placa do veículo">
-            </div>
-
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Guardar Veículo</button>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Lista de Veículos para Retirar</button>
-            </div>
-        </form>-->
-
-
-
-
-
-
-        <form action="confirmacao.php" method="post" class="row g-3">
+   <h1>Seja bem vindo(a) <?php echo $_SESSION['usuario'] ?> </h1>
+        <form action="verificacao.php" method="post" class="row g-3">
             <div class="col-md-12">
                 <label for="nomeProprietario" class="form-label">Nome do Proprietário</label>
                 <input type="text" name="nomeProprietario" class="form-control" id="nomeProprietario">

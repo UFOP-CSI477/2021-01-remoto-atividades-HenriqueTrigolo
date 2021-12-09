@@ -1,5 +1,4 @@
 <?php
-
     $nomeProprietario = $_POST["nomeProprietario"];
     $marca = $_POST["marca"];
     $modelo = $_POST["modelo"];
@@ -17,14 +16,6 @@
     $_SESSION['vaga'] = $vaga;   
     $_SESSION['entrada'] = $entrada;
     $_SESSION['valorHora'] = $valorHora;
-    /*$nomeProprietario = $_POST["nomeProprietario"];
-    $marca = $_POST["marca"];
-    $modelo = $_POST["modelo"];
-    $placa = $_POST["placa"];
-    $vaga = $_POST["vaga"];
-    date_default_timezone_set('America/Sao_Paulo');    
-    $entrada = date('H:i:s');
-    $valorHora = $_POST["valorHora"];*/
 ?>
 
 <!DOCTYPE html>

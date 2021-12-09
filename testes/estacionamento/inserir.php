@@ -25,9 +25,14 @@ require_once('conexao_banco_dados.php');
     $inserir->bindValue(":nome_proprietario", $nome_proprietario);
     $inserir->bindValue(":hora_entrada", $hora_entrada);
     $inserir->bindValue(":valor_hora", $valor_hora);
-    $inserir->execute();
-    echo ('Cadastro com sucesso');
-    echo "Salvo com sucesso!";
+    //$inserir->execute();
+
+    if($inserir->execute()){
+        require('confirmacao.html');
+    }else{
+        require('ocupada.html');
+    }
+        
     
     $deletar = $pdo->prepare("DELETE FROM `vaga` WHERE `vaga`.`ID` = 2");
     $deletar->execute();

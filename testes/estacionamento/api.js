@@ -27,7 +27,6 @@ function carregarMarca(){
         .catch(error => console.error(error))
 }
 
-
 function preencherModelo(data){
     let modelo = document.getElementById("modelo");
     limparSelect(modelo);
@@ -49,13 +48,6 @@ function carregarModelo(valor){
         .catch(error => console.error(error))
 }
 
-function marcaselecionada(valor){
-    console.log("https://parallelum.com.br/fipe/api/v1/carros/marcas/"+valor+"/modelos");
-}
-
-
-
-
 function iniciaRelogio(){
     var data = new Date;      
     var hora = data.getHours(); 
@@ -63,5 +55,4 @@ function iniciaRelogio(){
     var seg = data.getSeconds();      
     document.querySelector('.timer').value = hora+"h"+min+":"+seg;
     t=setTimeout('iniciaRelogio()',500);
-    
 }

@@ -1,6 +1,8 @@
 <?php
     session_start();
+    echo $_SESSION['usuario'];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,6 +68,7 @@
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Guardar Veículo</button>
             </div>
+
         </form>
 
 

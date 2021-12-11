@@ -11,11 +11,7 @@ require_once('conexao_banco_dados.php');
     $hora_entrada = $_SESSION['entrada'];
     $valor_hora = $_SESSION['valorHora'];
 
-/*
-    echo $nome_proprietario;
-    echo $marca;
-    echo $modelo;
-*/
+    
 
     $inserir = $pdo->prepare("INSERT INTO vaga set ID = :id, Marca = :marca, Modelo = :modelo, Placa = :placa,  Nome_Proprietario = :nome_proprietario, Hora_Entrada = :hora_entrada, Valor_Hora = :valor_hora");
     $inserir->bindValue(":id", $vaga_ocupada);
@@ -32,22 +28,18 @@ require_once('conexao_banco_dados.php');
     }else{
         require('ocupada.html');
     }
-        
+    /*    
     
-    $deletar = $pdo->prepare("DELETE FROM `vaga` WHERE `vaga`.`ID` = 2");
-    $deletar->execute();
-    /*
-    Vaga Ocupada
-    Marca
-    Modelo
-    Placa
-    Nome Proprietário
-    Hora Entrada
-    Valor Hora
+    //$deletar = $pdo->prepare("DELETE FROM `vaga` WHERE `vaga`.`ID` = 2");
+    //$deletar->execute();
 
-    $inserir = $pdo->prepare("INSERT INTO vagas set Vaga Ocupada = :vaga_ocupada, Marca = :marca, Modelo = :modelo, Placa = :placa,  Nome Proprietário = :nome_proprietario, Hora Entrada = :hora_entrada, Valor Hora = :valor_hora");
-   
-    */
+    $pesquisar = $pdo->query("SELECT ID FROM vaga");
+
+    $rows = $pesquisar->fetchAll();
+ 
+    print_r( $rows[1][0] );
+
+*/
  ?>
 
  

@@ -9,9 +9,7 @@ require_once('conexao_banco_dados.php');
     $placa = $_SESSION['placa'];
     $nome_proprietario = $_SESSION['nomeProprietario'];
     $hora_entrada = $_SESSION['entrada'];
-    $valor_hora = $_SESSION['valorHora'];
-
-    
+    $valor_hora = $_SESSION['valorHora'];    
 
     $inserir = $pdo->prepare("INSERT INTO vaga set ID = :id, Marca = :marca, Modelo = :modelo, Placa = :placa,  Nome_Proprietario = :nome_proprietario, Hora_Entrada = :hora_entrada, Valor_Hora = :valor_hora");
     $inserir->bindValue(":id", $vaga_ocupada);
@@ -21,25 +19,12 @@ require_once('conexao_banco_dados.php');
     $inserir->bindValue(":nome_proprietario", $nome_proprietario);
     $inserir->bindValue(":hora_entrada", $hora_entrada);
     $inserir->bindValue(":valor_hora", $valor_hora);
-    //$inserir->execute();
 
     if($inserir->execute()){
         require('confirmacao.html');
     }else{
         require('ocupada.html');
     }
-    /*    
-    
-    //$deletar = $pdo->prepare("DELETE FROM `vaga` WHERE `vaga`.`ID` = 2");
-    //$deletar->execute();
-
-    $pesquisar = $pdo->query("SELECT ID FROM vaga");
-
-    $rows = $pesquisar->fetchAll();
- 
-    print_r( $rows[1][0] );
-
-*/
  ?>
 
  

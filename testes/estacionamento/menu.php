@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $usuario = $_SESSION['usuario'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +12,17 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
 </head>
-
+<body>
+    <h1>HPark</h1>
+    <h2>Bem vindo(a) <?php echo $usuario?></h2>
+    <form action="dados_veiculo.php" method="post">
+        <input type="submit" class="btn btn-primary" value="Adicionar veículo">
+    </form>
     <form action="retirar.php" method="post">
-
-
-    
-        <p>Qual vaga sera liberada?</p>
-        <select name="vaga" id="">
-            <option value="1">Vaga 1</option>
-            <option value="2">Vaga 2</option>
-            <option value="3">Vaga 3</option>
-        </select>
-        <input type="submit" value="Enviar">
+        <input type="submit" class="btn btn-primary" value="Retirar veículo">
     </form>
 </body>
 </html>

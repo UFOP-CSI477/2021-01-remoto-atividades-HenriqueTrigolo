@@ -9,22 +9,26 @@
     <title>Index</title>
 </head>
 <body>
-    <div class="tela-login">
-        <form action="dados_usuario.php" method="post">
-            <div>
-                <h1>Login</h1>
-            </div>
-            <div class="mb-3">
-                <label for="usuario" class="label-login">Usuário</label>
-                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Digite seu usuário">
-            </div>
-            <div class="mb-3">
-                <label for="senha" class="label-login">Senha</label>
-                <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
-            </div>
+    <div class="sombra">
+        <div class="tela-login">
             
-            <input type="submit" class="btn btn-primary btn-lg">
-        </form>
+            <form action="dados_usuario.php" method="post" class="form-tela-login">
+                <div>
+                    <h1 class="login">LOGIN</h1>
+                </div>
+                <div class="mb-3">
+                    <label for="usuario" class="label-login">Usuário</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Digite seu usuário">
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="label-login">Senha</label>
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
+                </div>
+                
+                <input type="submit" class="btnlogin"> 
+            </form>
+        </div>
     </div>
+    
 </body>
 </html>

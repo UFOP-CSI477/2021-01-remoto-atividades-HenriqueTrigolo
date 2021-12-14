@@ -53,12 +53,22 @@
     <title>Document</title>
 </head>
 <body onload="carregaVagas()">
-    <form action="retirado.php" method="post">
-        <p>Qual vaga sera liberada?</p>
-        <select name="vaga" id="vagas">
-            <option>Selecione uma</option>
-        </select>
-        <input type="submit" value="Enviar">
-    </form>
+<div class="sombra3">
+    <div class="retirar">
+        <form action="retirado.php" method="post" >
+            <div class="labelRetirar">
+                <h2>Qual vaga sera liberada?</h2>
+            </div>
+            <div class="selectRetirar">
+                <select name="vaga" id="vagas" class="slctRetirar">
+                    <option>Selecione uma</option>
+                </select>
+            </div>
+            <div class="botaoRetirar">
+                <input type="submit"  value="Enviar" class="btnRetirar">
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>

@@ -50,14 +50,26 @@ require_once('conexao_banco_dados.php');
     <title>Document</title>
 </head>
 <body>
-    <h1>Veículo retirado com sucesso!!</h1>
-    <h2>
-        Período de permanencia: <?php echo $tempo?>
-    </h2>
-    <h2>
-        Total a pagar: R$<?php echo $total_pagar?>,00
-    </h2>
-    <a href="menu.php">Início</a>
-
+    <div class="sombra4">
+        <div class="telaRetirado">
+            <form action="menu.php">
+            <div class="sucesso">
+                <h1>Veículo retirado com sucesso!!</h1>
+            </div>
+            <div class="aPagar">
+                <h2>
+                    Período de permanencia: <?php echo $tempo?>
+                </h2>
+                <h2>
+                    Total a pagar: R$<?php echo $total_pagar?>,00
+                </h2>
+            </div>
+            <div class="botaoRetirado">
+                <input type="submit" value="Inicio" class="inicio">
+            </div>
+        </form>
+        </div>
+    </div>
+    
 </body>
 </html>

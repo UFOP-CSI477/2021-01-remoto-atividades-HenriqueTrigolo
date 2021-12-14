@@ -16,13 +16,23 @@
     <title>Menu</title>
 </head>
 <body>
-    <h1>HPark</h1>
-    <h2>Bem vindo(a) <?php echo $usuario?></h2>
-    <form action="dados_veiculo.php" method="post">
-        <input type="submit" class="btn btn-primary" value="Adicionar veículo">
-    </form>
-    <form action="retirar.php" method="post">
-        <input type="submit" class="btn btn-primary" value="Retirar veículo">
-    </form>
+    <div class="sombra2">
+        <div class="menu">
+            <div class="logotipo">
+                <img src="./imagem/Logo_HPARK.png" alt="Logo HPark" class="HPark">
+            </div>
+            <div class="BVusuario">
+                <h2>Bem vindo(a) <?php echo $usuario?></h2>
+            </div>
+            <div class="botoes">
+                <form action="dados_veiculo.php" method="post" class="form-menu">
+                    <input type="submit" class="btnMenu" value="Adicionar veículo">
+                </form>
+                <form action="retirar.php" method="post" class="form-menu">
+                    <input type="submit" class="btnMenu" value="Retirar veículo">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
